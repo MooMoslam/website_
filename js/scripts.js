@@ -54,47 +54,7 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // تحديث القيم من السيرفر
-    function updateValues() {
-        fetch("/temperature_Robot")
-            .then(res => res.text())
-            .then(temp => document.getElementById("temperature_Robot").innerText = ` ${temp} `)
-            .catch(console.error);
-
-        fetch("/humidity_Robot")
-            .then(res => res.text())
-            .then(humid => document.getElementById("humidity_Robot").innerText = ` ${humid} `)
-            .catch(console.error);
-
-        fetch("/temperature_room")
-            .then(res => res.text())
-            .then(tempRoom => document.getElementById("temperature_room").innerText = ` ${tempRoom} `)
-            .catch(console.error);
-
-        fetch("/humidity_room")
-            .then(res => res.text())
-            .then(humidRoom => document.getElementById("humidity_room").innerText = ` ${humidRoom} `)
-            .catch(console.error);
-
-        fetch("/water_level")
-            .then(res => res.text())
-            .then(water => document.getElementById("water_level").innerText = ` ${water} `)
-            .catch(console.error);
-
-        fetch("/tank_level")
-            .then(res => res.text())
-            .then(tank => document.getElementById("tank_level").innerText = ` ${tank} `)
-            .catch(console.error);
-
-        fetch("/BatteryLevel")
-            .then(res => res.text())
-            .then(battery => document.getElementById("BatteryLevel").innerText = ` ${battery} `)
-            .catch(console.error);
-    }
-
-    updateValues();
-    setInterval(updateValues, 2000);
-
+    
     // استرجاع حالة السلايدرز
     const uvToggle = document.getElementById("uv");
     const sprayToggle = document.getElementById("spray");
@@ -178,13 +138,20 @@ function startCountdown(resume = false) {
     }
 }
 
+
 function stopCountdown() {
     clearInterval(countdownInterval);
     countdownStarted = false;
     localStorage.removeItem("countdownEndTime");
     const countdownElem = document.getElementById("countdown");
-    if (countdownElem) countdownElem.innerHTML = "";
+    if (countdownElem) {
+        countdownElem.innerHTML = "1:00";
+        countdownElem.style.color = "black";  // تغيير اللون
+        countdownElem.style.fontSize = "50px";  // تغيير الحجم
+        countdownElem.style.fontWeight = "bold";  // جعل الخط سميك
+    }
 }
+
 
 function stopUV() {
     uvState = false;
@@ -194,6 +161,7 @@ function stopUV() {
     fetch("/uv?state=OFF").catch(console.error);
 }
 
+
 function stopSpray() {
     sprayState = false;
     localStorage.setItem("spray", "OFF");
@@ -201,6 +169,7 @@ function stopSpray() {
     document.getElementById("spray-status").style.color = "#c40000";
     fetch("/spray?state=OFF").catch(console.error);
 }
+
 
 function toggleUV(checkbox, restoring = false) {
     const statusDiv = document.getElementById("uv-status");
@@ -220,6 +189,7 @@ function toggleUV(checkbox, restoring = false) {
     }
 }
 
+
 function toggleSpray(checkbox, restoring = false) {
     const statusDiv = document.getElementById("spray-status");
     const state = checkbox.checked ? "ON" : "OFF";
@@ -238,6 +208,7 @@ function toggleSpray(checkbox, restoring = false) {
     }
 }
 
+
 function stopCountdownIfNeeded() {
     const currentUV = localStorage.getItem("uv");
     const currentSpray = localStorage.getItem("spray");
@@ -247,6 +218,7 @@ function stopCountdownIfNeeded() {
     }
 }
 
+
 function toggleEmergency(checkbox) {
     const statusDiv = document.getElementById("emergency-status");
     const state = checkbox.checked ? "ON" : "OFF";
@@ -255,6 +227,7 @@ function toggleEmergency(checkbox) {
 
     fetch("/emergency?state=" + state).catch(console.error);
 }
+
 
 // تحديث لون النص حسب حالة السويتشات
 document.querySelectorAll(".toggle-switch input").forEach(input => {
@@ -267,8 +240,10 @@ document.querySelectorAll(".toggle-switch input").forEach(input => {
     });
 });
 
+
 // ===== كود التحكم في حركة الروبوت والسرعة =====
 let currentMove = null;
+
 
 // إرسال أمر الحركة
 function sendMove(direction) {
@@ -280,6 +255,7 @@ function sendMove(direction) {
   }
 }
 
+
 // إرسال أمر التوقف
 function stopMove() {
   if (currentMove !== null) {
@@ -290,6 +266,7 @@ function stopMove() {
   }
 }
 
+
 // تحديث السرعة
 function updateSpeed(val) {
   document.getElementById('speedVal').innerText = val;
@@ -297,6 +274,7 @@ function updateSpeed(val) {
     .then(() => console.log(`🚀 Speed: ${val}`))
     .catch(err => console.error("❌ Error setting speed:", err));
 }
+
 
 // إضافة أحداث اللمس والضغط
 document.querySelectorAll('button[data-dir]').forEach(button => {
@@ -322,6 +300,3 @@ document.querySelectorAll('button[data-dir]').forEach(button => {
     stopMove();
   });
 });
-
-  
-  

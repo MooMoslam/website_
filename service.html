@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Agency - Start Bootstrap Theme</title>
+        <title>Autonomous sterilization robot for hospitals</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -91,7 +91,7 @@
                                 <h4 class="my-3">Web Server</h4>
                                 <p class="text-muted">"Our web server is designed with simplicity and clarity in mind, providing an intuitive and seamless user experience. With a clean, straightforward interface, it ensures effortless access and control, allowing users to interact with the system with ease and efficiency."</p>
                             </div>
-                            <a class="btn btn-primary btn-xl text-uppercase" href="#Design">ESP32 Web server design</a>
+                            <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">ESP32 Web server design</a>
 
                         </div>
 
@@ -100,118 +100,69 @@
         </section>
 
 
-        <!--كود كريم جليلة-->
-
-        <h6>🎮 ROBOT SPEED AND DIRECTION CONTROL</h6>
-        <div class="control-layout" id="Design">
-            <div class="button-container">
-                <div class="buttons">
-                    <button data-dir="forward" class= "arrow up">▲</button>
-        
-                    <div class="middle-row">
-                        <button data-dir="left" class="arrow left">◀</button>
-                        <button data-dir="right" class="arrow right">▶</button>
-                    </div>
-                    <button data-dir="back" class="arrow left">▼</button>
-                  </div>
-            </div>
-        
-            <div class="slider-speed">
-                    <label for="speedRange">Speed: <span id="speedVal">0</span></label>
-                    <input type="range" id="speedRange" min="0" max="255" value="0" oninput="updateSpeed(this.value)">
-            </div>
-        
-        </div>
-    
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+                        <div class="container">
+                            <div class="text-center">
+                                <h2 class="section-heading text-uppercase">ESP32 Web Server Design</h2>
+                            </div>
+                            <div class="row">
     
 
-        <h6>ROBOT PANEL CONTROL</h6>
-        <!-- مفاتيح التحكم -->
-        <div class="box-grid">
-
-            <div class="card-1">
-                <div class="title">Spray</div>
-                <div class="status" id="spray-status">
-                    <span class="toggle-label">OFF</span>
-                </div>
-                <label class="toggle-switch">
-                    <input type="checkbox" id="spray" onchange="toggleSpray(this)">
-                    <span class="slider"></span>
-                </label>
-            </div>
-    
-            <div class="card-1">
-                <div class="title">UV light</div>
-                <div class="status" id="uv-status">
-                    <span class="toggle-label">OFF</span>
-                </div>
-                <label class="toggle-switch">
-                    <input type="checkbox" id="uv" onchange="toggleUV(this)">
-                    <span class="slider"></span>
-                </label>
-            </div>
-    
-            <div class="card-1">
-                <div class="title">Emergency</div>
-                <div class="status" id="emergency-status">
-                    <span class="toggle-label">OFF</span>
-                </div>
-                <label class="toggle-switch">
-                    <input type="checkbox" id="emergency" onchange="toggleEmergency(this)">
-                    <span class="slider"></span>
-                </label>
-            </div>
-    
-        </div>
-    
-
-    
-        <h6>⏳ TIMER COUNTDOWN</h6>
-        <div class="countdown-container">
-        <div id="countdown">1:00</div>
-        </div>
+                                <div class="col-lg-4 col-sm-6 mb-4">
+                                    <!-- Portfolio item 1-->
+                                    <div class="portfolio-item">
+                                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                            <div class="portfolio-hover">
+                                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                            </div>
+                                            <img class="img-fluid" src="assets/img/portfolio/1143033-2560x1600-desktop-hd-robot-background-photo.jpg.png" alt="..." />
+                                        </a>
+                                        <div class="portfolio-caption">
+                                            <div class="portfolio-caption-heading">Robot Control</div>
+                                            <div class="portfolio-caption-subheading text-muted">Speed & Direction </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
+                                <div class="col-lg-4 col-sm-6 mb-4">
+                                    <!-- Portfolio item 2-->
+                                    <div class="portfolio-item">
+                                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                            <div class="portfolio-hover">
+                                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                            </div>
+                                            <img class="img-fluid" src="assets/img/portfolio/1381103.png" alt="..." />
+                                        </a>
+                                        <div class="portfolio-caption">
+                                            <div class="portfolio-caption-heading">CONTROL PANEL</div>
+                                            <div class="portfolio-caption-subheading text-muted">Spary & UV & Emergency</div>
+                                        </div>
+                                    </div>
+                                </div>
 
-        <h6>SENSOR DATA READING</h6>
-        <!--قراءات-->
-        <div class="mygrid">
-            <div class="card robot temp">
-                <h3>🌡️ ROBOT TEMPERATURE</h3>
-                <div class="value"><span id="temperature_Robot">--</span> °C</div>
-            </div>
 
-            <div class="card room temp">
-                <h3>🌡️ ROOM TEMPERATURE</h3>
-                <div class="value"><span id="temperature_room">--</span> °C</div>
-            </div>
+                                <div class="col-lg-4 col-sm-6 mb-4">
+                                    <!-- Portfolio item 3-->
+                                    <div class="portfolio-item">
+                                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                            <div class="portfolio-hover">
+                                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                            </div>
+                                            <img class="img-fluid" src="assets/img/portfolio/robot-with-computer-his-lap-screen-with-background-graphs-charts_137441-20661.png" alt="..." />
+                                        </a>
+                                        <div class="portfolio-caption">
+                                            <div class="portfolio-caption-heading">Monitoring</div>
+                                            <div class="portfolio-caption-subheading text-muted">Robot Status</div>
+                                        </div>
+                                    </div>
+                                </div>
 
-            <div class="card robot humidity">
-                <h3>💧 ROBOT HUMIDITY</h3>
-                <div class="value"><span id="humidity_Robot">--</span> %</div>
-            </div>
 
-            <div class="card room humidity">
-                <h3>💧 ROOM HUMIDITY</h3>
-                <div class="value"><span id="humidity_room">--</span> %</div>
-            </div>
-
-            <div class="card water level">
-                <h3>🧪 WATER LEVEL</h3>
-                <div class="value"><span id="water_level">--</span> %</div>
-            </div>
-
-            <div class="card tank level">
-                <h3>⛽ TANK LEVEL</h3>
-                <div class="value"><span id="tank_level">--</span> %</div>
-            </div>
-
-            <div class="card battery level">
-                <h3>🔋 BATTERY LEVEL</h3>
-                <div class="value"><span id="BatteryLevel">--</span> %</div>
-            </div>
-        </div>
-
+                            </div>
+                        </div>
+        </section>
 
 
         <!-- Clients-->
@@ -242,18 +193,17 @@
                 </div>
             </div>
         </div>
-        
-        
+
+
         <!-- Footer-->
         <footer class="footer py-4">
-    <div class="container">
+        <div class="container">
         <div class="row align-items-center">
             <!-- النص على اليسار -->
             <div class="col-lg-4 text-lg-start"> COPYRIGHT BIOVIBE TEAM 2025 </div>
 
             <!-- اللوجو في المنتصف -->
             <div class="col-lg-4 text-center">
-                <a href="#!"><img src="assets/img/logos/images (1).png" alt="Logo" class="img-fluid" style="max-height: 50px;"></a>
             </div>
 
             <!-- النص على اليمين -->
@@ -263,12 +213,6 @@
         </div>
     </div>
         </footer>
-
-
-
-
-
-
 
 
         <!-- Bootstrap core JS-->
@@ -284,4 +228,181 @@
 
 </body>
 </html>
-    
+
+
+<!-- Portfolio item 1 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                       <!--كود كريم جليلة-->
+                                       <h6>🎮 ROBOT SPEED AND DIRECTION CONTROL</h6>
+                                       <div class="control-layout" id="Design">
+<div class="button-container">
+    <div class="buttons">
+        <button data-dir="forward" class= "arrow up">▲</button>
+
+        <div class="middle-row">
+            <button data-dir="left" class="arrow left">◀</button>
+            <button data-dir="right" class="arrow right">▶</button>
+        </div>
+        <button data-dir="back" class="arrow left">▼</button>
+      </div>
+</div>
+
+<div class="slider-speed">
+        <label for="speedRange">Speed: <span id="speedVal">0</span></label>
+        <input type="range" id="speedRange" min="0" max="150" value="0" oninput="updateSpeed(this.value)">
+</div>
+
+                                       </div>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Section
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+
+<!-- Portfolio item 2 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+
+
+                                    <h6>ROBOT CONTROL PANEL</h6>
+                                    <!-- مفاتيح التحكم -->
+                                    <div class="box-grid">
+                            
+                                        <div class="card-1">
+                                            <div class="title">Spray</div>
+                                            <div class="status" id="spray-status">
+                                                <span class="toggle-label">OFF</span>
+                                            </div>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" id="spray" onchange="toggleSpray(this)">
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                
+                                        <div class="card-1">
+                                            <div class="title">UV light</div>
+                                            <div class="status" id="uv-status">
+                                                <span class="toggle-label">OFF</span>
+                                            </div>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" id="uv" onchange="toggleUV(this)">
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                
+                                        <div class="card-1">
+                                            <div class="title">Emergency</div>
+                                            <div class="status" id="emergency-status">
+                                                <span class="toggle-label">OFF</span>
+                                            </div>
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" id="emergency" onchange="toggleEmergency(this)">
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                
+                                    </div>
+
+
+                                    <h6>⏳ TIMER COUNTDOWN</h6>
+                                    <div class="countdown-container">
+                                    <div id="countdown">1:00</div>
+                                    </div>
+
+
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Section
+                                    </button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+
+<!-- Portfolio item 3 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                                    <!-- Project details-->
+
+                                    <h6>SENSOR DATA READING</h6>
+                                    <!--قراءات-->
+                                    <div class="mygrid">
+                                        <div class="card robot temp">
+                                            <h3>🌡️ ROBOT TEMPERATURE</h3>
+                                            <div class="value"><span id="temperature_Robot">--</span> °C</div>
+                                        </div>
+                            
+                                        <div class="card room temp">
+                                            <h3>🌡️ ROOM TEMPERATURE</h3>
+                                            <div class="value"><span id="temperature_room">--</span> °C</div>
+                                        </div>
+                            
+                                        <div class="card robot humidity">
+                                            <h3>💧 ROBOT HUMIDITY</h3>
+                                            <div class="value"><span id="humidity_Robot">--</span> %</div>
+                                        </div>
+                            
+                                        <div class="card room humidity">
+                                            <h3>💧 ROOM HUMIDITY</h3>
+                                            <div class="value"><span id="humidity_room">--</span> %</div>
+                                        </div>
+                            
+                                        <div class="card water level">
+                                            <h3>🧪 WATER LEVEL</h3>
+                                            <div class="value"><span id="water_level">--</span> %</div>
+                                        </div>
+                            
+                                        <div class="card tank level">
+                                            <h3>⛽ TANK LEVEL</h3>
+                                            <div class="value"><span id="tank_level">--</span> %</div>
+                                        </div>
+                            
+                                        <div class="card battery level">
+                                            <h3>🔋 BATTERY LEVEL</h3>
+                                            <div class="value"><span id="BatteryLevel">--</span> %</div>
+                                        </div>
+                                    </div>
+
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close Section
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
