@@ -311,23 +311,28 @@
                                             </label>
                                         </div>
                                 
-                                        <div class="card-1">
-                                            <div class="title">Emergency</div>
-                                            <div class="status" id="emergency-status">
-                                                <span class="toggle-label">OFF</span>
-                                            </div>
-                                            <label class="toggle-switch">
-                                                <input type="checkbox" id="emergency" onchange="toggleEmergency(this)">
-                                                <span class="slider"></span>
-                                            </label>
-                                        </div>
                                 
                                     </div>
 
 
                                     <h6>⏳ TIMER COUNTDOWN</h6>
-                                    <div class="countdown-container">
-                                    <div id="countdown">1:00</div>
+                                    <div class="timer-container">
+        <div id="countdown">00h : 1m : 00s</div>
+
+        <div id="loading-circle" class="loading-circle"></div>
+
+        <div id="progress-container">
+            <div id="progress-bar"><span id="progress-text">0%</span></div>
+        </div>
+
+    <div class="timer-controls">
+       <button onclick="addMinutes(1)">+1 Minute</button>
+       <button onclick="addHours(1)">+1 Hour</button>
+       <button onclick="addMinutes(-1)">-1 Minute</button>
+       <button onclick="addHours(-1)">-1 Hour</button>
+    </div>
+
+
                                     </div>
 
 
